@@ -42,8 +42,8 @@ DWORD WINAPI MainThread(LPVOID)
     auto NewConsole = Globals::GPS->STATIC_SpawnObject(UFortConsole::StaticClass(), FortEngine->GameViewport);
     FortEngine->GameViewport->ViewportConsole = (UFortConsole*)(NewConsole);
 
-    auto NewCheatManager = Globals::GPS->STATIC_SpawnObject(UCheatManager::StaticClass(), FortEngine->GameInstance->LocalPlayers[0]->PlayerController);
-    FortEngine->GameInstance->LocalPlayers[0]->PlayerController->CheatManager = (UCheatManager*)(NewCheatManager);
+    auto NewAntiCheatManager = Globals::GPS->STATIC_SpawnObject(UCheatManager::StaticClass(), FortEngine->GameInstance->LocalPlayers[0]->PlayerController);
+    FortEngine->GameInstance->LocalPlayers[0]->PlayerController->AntiCheatManager = (AntiCheatManager*)(AntiCheatManager);
 
     MH_Initialize();
 
